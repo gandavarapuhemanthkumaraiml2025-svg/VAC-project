@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-ivory text-graphite font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  :focus-visible {
+    @apply outline-2 outline-teal outline-offset-2;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  /* ── Glass card ─────────────────────────────── */
+  .card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl shadow-card;
+  }
+  .card-teal {
+    @apply bg-teal/5 border border-teal/20 rounded-2xl shadow-card;
+  }
+  .card-ivory {
+    @apply bg-ivory border border-sage/60 rounded-2xl shadow-card;
+  }
+
+  /* ── Buttons ─────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold
+           transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed select-none;
+  }
+  .btn-primary {
+    @apply btn bg-teal text-white hover:bg-teal-light active:bg-teal-dark
+           focus-visible:outline-teal shadow-teal/30 shadow-sm;
+  }
+  .btn-secondary {
+    @apply btn bg-ivory text-graphite border border-sage hover:bg-sage/50
+           focus-visible:outline-teal;
+  }
+  .btn-ghost {
+    @apply btn text-graphite/70 hover:text-graphite hover:bg-sage/40;
+  }
+  .btn-danger {
+    @apply btn bg-red-50 text-red-700 border border-red-200 hover:bg-red-100;
+  }
+
+  /* ── Decision badges ─────────────────────────── */
+  .badge-water-now {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
+           bg-teal text-white;
+  }
+  .badge-check-soil {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
+           bg-terracotta text-white;
+  }
+  .badge-wait {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
+           bg-sage text-graphite;
+  }
+
+  /* ── Form elements ───────────────────────────── */
+  .form-label {
+    @apply block text-xs font-semibold text-graphite/70 uppercase tracking-wide mb-1.5;
+  }
+  .form-input {
+    @apply w-full rounded-xl border border-sage/70 bg-white/90 px-3.5 py-2.5 text-sm
+           text-graphite placeholder-graphite/40 shadow-sm
+           focus:border-teal focus:ring-2 focus:ring-teal/20 focus:outline-none
+           transition-colors duration-150;
+  }
+  .form-select {
+    @apply form-input appearance-none cursor-pointer;
+  }
+  .form-error {
+    @apply text-xs text-red-600 mt-1 flex items-center gap-1;
+  }
+
+  /* ── Status cards ────────────────────────────── */
+  .decision-water-now {
+    @apply border-l-4 border-teal bg-teal/5 rounded-r-2xl;
+  }
+  .decision-check-soil {
+    @apply border-l-4 border-terracotta bg-terracotta/5 rounded-r-2xl;
+  }
+  .decision-wait {
+    @apply border-l-4 border-sage-dark bg-sage/20 rounded-r-2xl;
+  }
+
+  /* ── Nav ─────────────────────────────────────── */
+  .nav-link {
+    @apply flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium
+           text-graphite/60 hover:text-graphite hover:bg-sage/40 transition-all duration-150;
+  }
+  .nav-link-active {
+    @apply nav-link bg-teal/10 text-teal font-semibold;
+  }
+
+  /* ── Stat chip ───────────────────────────────── */
+  .stat-chip {
+    @apply flex flex-col gap-0.5 bg-white/70 border border-sage/50 rounded-xl p-3;
+  }
+
+  /* ── Warning banner ──────────────────────────── */
+  .warning-banner {
+    @apply flex items-start gap-2 text-xs text-amber-800 bg-amber-50 border border-amber-200
+           rounded-xl px-3 py-2;
+  }
+  .info-banner {
+    @apply flex items-start gap-2 text-xs text-teal bg-teal/5 border border-teal/20
+           rounded-xl px-3 py-2;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .scrollbar-hide { scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}

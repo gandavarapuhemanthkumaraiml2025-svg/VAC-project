@@ -1,0 +1,31 @@
+plant_type,growth_stage,soil_type,pot_size,drainage,light_exposure,soil_moisture_value,soil_moisture_unit,soil_moisture_method,soil_observation,soil_observed_at,temperature_c,rainfall_last_24h_mm,forecast_rainfall_mm,forecast_rain_probability,advisory_label,advisory_reason,source_id,data_origin,quality_flag
+tomato,vegetative,potting_mix,medium,True,full_sun,,,,dry,2024-06-01T08:00:00Z,28.5,0.0,1.2,15,WATER_NOW,Soil dry below tomato minimum moisture,RULE_T01,synthetic,ok
+tomato,vegetative,potting_mix,medium,True,full_sun,,,,moist,2024-06-01T09:00:00Z,28.5,0.0,1.2,15,WAIT,Soil adequately moist for tomato,RULE_T02,synthetic,ok
+tomato,vegetative,potting_mix,medium,True,full_sun,,,,wet,2024-06-01T10:00:00Z,28.5,0.0,1.2,15,WAIT,Soil wet — overwatering risk,RULE_T02,synthetic,ok
+tomato,vegetative,potting_mix,medium,True,full_sun,,,,slightly_moist,2024-06-01T11:00:00Z,28.5,0.0,1.2,15,WAIT,Soil slightly moist — adequate,RULE_T02,synthetic,ok
+tomato,flowering,potting_mix,large,True,full_sun,22.0,%,percentage,,2024-06-01T12:00:00Z,31.0,0.0,0.0,5,WATER_NOW,Percentage below 30% low threshold,RULE_T03,synthetic,ok
+tomato,flowering,potting_mix,large,True,full_sun,55.0,%,percentage,,2024-06-01T13:00:00Z,31.0,0.0,0.0,5,WAIT,Percentage in adequate range,RULE_T03,synthetic,ok
+tomato,flowering,potting_mix,large,True,full_sun,85.0,%,percentage,,2024-06-01T14:00:00Z,31.0,2.5,0.0,20,WAIT,Percentage above 80% — do not water,RULE_T04,synthetic,ok
+tomato,fruiting,potting_mix,large,True,full_sun,,,,dry,2024-06-02T08:00:00Z,35.0,0.0,0.0,10,WATER_NOW,Soil dry during fruiting stage,RULE_T01,synthetic,ok
+tomato,fruiting,potting_mix,large,True,full_sun,,,,moist,2024-06-02T09:00:00Z,35.2,12.0,2.0,60,WAIT,Moist soil + significant recent rainfall,RULE_W01,synthetic,ok
+tomato,seedling,potting_mix,small,True,full_sun,,,,dry,2024-06-03T08:00:00Z,27.0,0.0,0.0,5,WATER_NOW,Seedling soil dry,RULE_T01,synthetic,ok
+tomato,seedling,potting_mix,small,True,full_sun,,,,wet,2024-06-03T09:00:00Z,27.0,0.0,0.0,5,WAIT,Seedling wet — damping off risk,RULE_T02,synthetic,ok
+basil,vegetative,potting_mix,medium,True,full_sun,,,,dry,2024-06-01T08:00:00Z,29.0,0.0,0.0,5,WATER_NOW,Basil soil dry — water needed,RULE_B02,synthetic,ok
+basil,vegetative,potting_mix,medium,True,full_sun,,,,slightly_moist,2024-06-01T09:00:00Z,29.0,0.0,0.0,5,WAIT,Basil slightly moist — adequate,RULE_B01,synthetic,ok
+basil,vegetative,potting_mix,medium,True,full_sun,,,,moist,2024-06-01T10:00:00Z,29.0,0.0,0.0,5,WAIT,Basil moist — adequate,RULE_B01,synthetic,ok
+basil,vegetative,potting_mix,medium,True,full_sun,,,,wet,2024-06-01T11:00:00Z,29.0,0.0,0.0,5,WAIT,Basil wet — overwatering risk,RULE_B01,synthetic,ok
+basil,seedling,potting_mix,small,True,full_sun,,,,dry,2024-06-02T08:00:00Z,30.0,0.0,0.0,10,WATER_NOW,Basil seedling dry,RULE_B02,synthetic,ok
+basil,seedling,potting_mix,small,True,full_sun,,,,wet,2024-06-02T09:00:00Z,30.0,0.0,0.0,10,WAIT,Basil seedling wet — rot risk,RULE_B01,synthetic,ok
+basil,flowering,potting_mix,medium,True,partial_sun,65.0,%,percentage,,2024-06-03T10:00:00Z,28.0,0.0,0.0,10,WAIT,Basil percentage above upper threshold,RULE_B03,synthetic,ok
+basil,flowering,potting_mix,medium,True,partial_sun,25.0,%,percentage,,2024-06-03T11:00:00Z,28.0,0.0,0.0,10,WATER_NOW,Basil percentage below low threshold,RULE_B02,synthetic,ok
+aloe_vera,mature,cactus_mix,medium,True,full_sun,,,,dry,2024-06-01T08:00:00Z,32.0,0.0,0.0,5,WATER_NOW,Aloe dry — water now,RULE_A02,synthetic,ok
+aloe_vera,mature,cactus_mix,medium,True,full_sun,,,,slightly_moist,2024-06-01T09:00:00Z,32.0,0.0,0.0,5,WAIT,Aloe slightly moist — wait,RULE_A01,synthetic,ok
+aloe_vera,mature,cactus_mix,medium,True,full_sun,,,,moist,2024-06-01T10:00:00Z,32.0,0.0,0.0,5,WAIT,Aloe moist — high overwater risk,RULE_A01,synthetic,ok
+aloe_vera,mature,cactus_mix,medium,True,full_sun,,,,wet,2024-06-01T11:00:00Z,32.0,0.0,0.0,5,WAIT,Aloe wet — critical overwater risk,RULE_A01,synthetic,ok
+aloe_vera,dormant,cactus_mix,medium,True,full_sun,,,,dry,2024-07-01T08:00:00Z,18.0,0.0,0.0,5,WATER_NOW,Aloe dormant but dry — water sparingly,RULE_A02,synthetic,ok
+aloe_vera,dormant,cactus_mix,medium,True,full_sun,,,,moist,2024-07-01T09:00:00Z,18.0,0.0,0.0,5,WAIT,Aloe dormant and moist — definitely wait,RULE_A01,synthetic,ok
+aloe_vera,mature,cactus_mix,large,True,full_sun,40.0,%,percentage,,2024-06-02T10:00:00Z,33.0,0.0,0.0,5,WAIT,Aloe percentage above 35% threshold,RULE_A03,synthetic,ok
+aloe_vera,mature,cactus_mix,large,True,full_sun,8.0,%,percentage,,2024-06-02T11:00:00Z,33.0,0.0,0.0,5,WATER_NOW,Aloe percentage below 10% — water,RULE_A02,synthetic,ok
+tomato,vegetative,potting_mix,medium,True,full_sun,,,,moist,2024-06-04T08:00:00Z,29.0,8.0,2.0,40,WAIT,Moist + recent rainfall,RULE_W01,synthetic,ok
+tomato,vegetative,potting_mix,medium,True,full_sun,,,,slightly_moist,2024-06-05T08:00:00Z,30.0,0.0,15.0,80,WAIT,Slight moist + high forecast rain,RULE_W02,synthetic,ok
+basil,vegetative,potting_mix,medium,False,full_sun,,,,dry,2024-06-06T08:00:00Z,31.0,0.0,0.0,5,WATER_NOW,Basil dry + no drainage warning,RULE_B02,synthetic,ok
